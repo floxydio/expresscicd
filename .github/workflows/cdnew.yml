@@ -12,7 +12,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            pm2 stop 0
+           sudo pm2 stop 0
           host: ${{ secrets.HOST }}
           user: flox-vm
           key: ${{ secrets.PRIVATE_KEY }}
