@@ -18,6 +18,7 @@ jobs:
     steps:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
+      
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -27,5 +28,7 @@ jobs:
           cd ~/expresscicd
           git pull origin master
           git status
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
           npm install --only=prod
           pm2 restart 0
