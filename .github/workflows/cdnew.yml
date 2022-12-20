@@ -18,4 +18,3 @@ jobs:
           user: flox-vm
           key: ${{ secrets.PRIVATE_KEY }}
           pass: ${{ secrets.PASSWORD }}
-          args: "-tt -vvv"
