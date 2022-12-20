@@ -5,6 +5,7 @@ const PORT = 3000;
 app.get("/product", function (req, res) {
   res.send({
     message: "Init Test",
+    data: "ABBBBB",
   });
 });
 
