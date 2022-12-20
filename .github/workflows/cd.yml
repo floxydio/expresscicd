@@ -1,4 +1,4 @@
-name: test
+name: Node JS CD
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: NodeCICD Deployment
+      - name: NodeCD Deployment
         uses: fifsky/ssh-action@master
         with:
           command: |
@@ -17,7 +17,6 @@ jobs:
            git pull origin master
            git status
            pm2 restart 0
-           exit
           host: ${{ secrets.HOST }}
           user: flox-vm
           key: ${{ secrets.PRIVATE_KEY }}
