@@ -16,5 +16,5 @@ jobs:
           host: ${{ secrets.HOST }}
           user: flox-vm
           key: ${{ secrets.PRIVATE_KEY }}
-#          pass: ${{ secrets.PASS }}
+          pass: ${{ secrets.PASSWORD }}
           args: "-tt -vvv"
