@@ -9,6 +9,12 @@ app.get("/product", function (req, res) {
   });
 });
 
+app.get("/name", function (req, res) {
+  res.send({
+    name: "Dio Rovelino",
+  });
+});
+
 app.listen(PORT, () => {
   console.log("Server Running on");
 });
