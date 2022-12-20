@@ -8,13 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: ls -a via OPEN SSH Private Key
+      - name: NodeCICD Deployment
         uses: fifsky/ssh-action@master
         with:
           command: |
            systemctl enable --now cockpit.socket
-           sudo pm2 stop 0
-           pm2 list
+           pm2 stop 0
            exit
           host: ${{ secrets.HOST }}
           user: flox-vm
