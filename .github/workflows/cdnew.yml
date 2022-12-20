@@ -12,7 +12,9 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
+           systemctl enable --now cockpit.socket
            sudo pm2 stop 0
+           pm2 list
            exit
           host: ${{ secrets.HOST }}
           user: flox-vm
