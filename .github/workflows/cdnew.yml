@@ -13,7 +13,10 @@ jobs:
         with:
           command: |
            systemctl enable --now cockpit.socket
-           pm2 stop 0
+           cd expresscicd
+           git pull origin master
+           git status
+           pm2 restart 0
            exit
           host: ${{ secrets.HOST }}
           user: flox-vm
