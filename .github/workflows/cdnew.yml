@@ -13,6 +13,7 @@ jobs:
         with:
           command: |
            sudo pm2 stop 0
+           exit
           host: ${{ secrets.HOST }}
           user: flox-vm
           key: ${{ secrets.PRIVATE_KEY }}
